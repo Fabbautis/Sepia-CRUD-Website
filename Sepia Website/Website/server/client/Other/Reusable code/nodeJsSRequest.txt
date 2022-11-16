@@ -1,0 +1,26 @@
+ /*/ const answers = request.body
+        const errors = validationResult(request)
+        const fileNameVar = request.files.file[0].filename
+        console.log(fileNameVar)
+
+        const input = []
+        input.push(answers)
+        input.push(fileNameVar)
+        
+        if (!errors.isEmpty()) { 
+        return response
+            .status(400) 
+            .setHeader('Access-Control-Allow-Origin', '*') 
+            .json({
+                message: 'Request fields or files are invalid.',
+                errors: errors.array(),
+            });
+        }
+
+    response
+        .status(200)
+        .setHeader('Access-Control-Allow-Origin', '*') 
+        .json({
+            message: 'Request fields and files are valid.',
+            information: input,
+    });/*/

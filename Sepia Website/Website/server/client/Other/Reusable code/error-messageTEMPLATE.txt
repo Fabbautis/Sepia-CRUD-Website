@@ -1,0 +1,18 @@
+
+<div class = 'row'>
+            <div class = 'col-2'></div> 
+            <div class = 'col-8 border'>
+                <div class = col-12>
+                    <h1>Assignment down, please check back later</h1>
+                </div>
+                <div class="row">
+                    <div class = 'col-3'></div>
+                    <div class = 'col-4 center'>
+                        <img id = 'error' src="../Images/sherman mouse.png"> I need to ask how I can center this better. col-3 col-6 col-3 doesnt work :( )
+                    </div>
+                    <div class = 'col-3'></div>
+                </div>
+                
+            </div>
+            <div class="col-2"></div>
+        </div>

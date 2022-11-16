@@ -1,0 +1,107 @@
+I should be making a list of changes to the website out of my own goodwil and not procrastination due to tyring to figure out the html and css stuff for cards hahahahahah.
+
+2/2/22
+Started this changelog thing. At the time, the server was up with basic data verification, alongside two pages (submit and home page).
+Moved css into more specific css files as to not have to rummage through very long css files.
+Finished first draft of card layout. Will probably edit colors and padding between elements
+Added card layout to js script + created variables that hold the data. Bug created where everything is undefined so I need to fix
+
+2/3/22
+Fixed bug but now I can't display images or files on the screen. Find a way to do so
+I think it has to do with the file path but I have no idea how to recreate it without making the buttonRequest js a server itself
+
+2/4/22
+Awesome so I was supposed to do what I did in 260 and pull everything in the form of a json. 
+Figure out how to do json file stuff because thats really Awesome
+
+2/5/22 - 2/6/22
+FINALLY FIGURED OUT THE JSON STUFF (Apparently I don't need files[0])
+Removed timer on submission screen and used button instead
+Did some css stuff to make sure images or file displays don't mess up on mobile
+Thinking about changing colors or design placement of cards
+
+2/11/22
+Started basics of SQL stuff (adding SQL code to server that can connect to database)
+
+2/14/22
+Actually finished the SQL adding stuff now that I don't feel like I'm going to mess up. I still kinda don't understand what I'm supposed to be doing
+
+2/15/22
+Created database and linked server code to database. Multer errors persist
+
+2/16/22
+Fixed multer errors. Redid some code. Now the form uses information from the database to add stuff to the card. I also added the extra requirements I think
+
+2/17/22
+Added all INSERT card functionality I think. I still feel a bit unconfident and I wanna display the inserted data on another page so I will ask about that
+
+2/18/22
+No work really done on the website, but I understand some SQL stuff a lot better now. Also I can't display database info yet :sob:
+
+2/19/22 - 2/20/22
+I don't know what was going on in 2/16. Anyways I reformatted my code to match a new database table format. Still can't display data so now some stuff on the card 
+upload is just 'undefined.' They're gonna be name submitted stuff temporarily until I can find a way to get database table info. I also don't think I need teacher
+since teacher is an extension of course so its decided when course is chosen. :thinking:
+
+3/7/22
+I'm procrastinating a lot and I don't like that. I renamed all my SQL tables to be 100% compliant with SQL notation. I put a lot of personal notes on my already 
+existing server code so that I can feel more comfortable in what I'm doing. I also tried to understand everythign written in ICA 7 so that I can implement it without help
+I discovered how to actually send data from the sql database back  to the computer to be used via app.get requests and innerjoins. I was able to create various cards based
+on the SQL data already presented. I was able to connect the data to a separate update.html file with the id being used to select specific data
+
+3/8/22
+I'm able to display the SQL data on the update.html form after some debugging with the SQL stuff. Fix the server not knowing the website id (?id = undefined);|
+
+3/9/22
+I literally just send the id number acquired on the client JS to the server via the formdata and used that to fix the update.html bug. I know thats probably not the 
+way we're expected to do it, but I don't understand node js server stuff enough to be lucky and magically find the specific object property name. Other than that, I
+fixed the big image issue, added a return home button on submit card page, and added a message that says a card got updated for update page. I also fixed the error messages
+not being shown for any of the pages (stupid image upload ruins everything). I'll add the specific error messages in the update form later, I'm lazy. Temporatily found a 
+workaround to avoid server not letting you update a card if you had any mistakes on the form (the queryParameters would get sent twice). There's a bug where you can't submit a card
+if you have any mistakes on the form via the hyperlink always reading as '' or whatever you typed previously. I have a feeling this is the same bug as the workaround solution.
+There is another bug where if you don't update the image of a card and return to the home menu, the image isn't shown (because file_loction is just '' and its not a directory).
+I wanna add some flexgrids to this but im too lazy to completely dismantle my front-end css and redo it + make it work with my javascript.
+
+3/11/22
+Added params.get('id') to get rid of that first issue on last update. I also fixed the issue of not being able to update / upload a card if you make a mistake because of stupid
+global variables.
+
+3/15/22
+Added a delete button on the bottom of every card. I also created a separate delete page that focuses on the card you're going to delete. I need to find a way to make a responsive
+embed tag or replace it with something that is responsive
+
+3/30/22
+Actually I'm writing this on 4/4/22. Whoopsies looks like I'm forgetting about this. I think I started integrating the model stuff to the
+server by creating connection and serverSelect.js. They didn't work at first because they were created with the intentions for a filter website
+
+4/1/22
+I went to office hours and got some help making a filter selection homepage where I can choose which cards I want to look at. I also did some
+server programming, but it still didn't work
+
+4/4/22
+I finished the entire server code after finding out I named some variables old names, made different variables wrong types, and so on and so forth. I have a issue though that the other
+pages won't work unless connection and sql are still defined in the master server code, but I'm sure that problem will be fixed next week when we import the entire code to other files. 
+Also I'm debating removing teacher from the filter because I have teacher be dictated from the class you choose. 
+
+4/5/22
+I migrated the app.post / sql insert stuff is in the models and learned how to make a more dynamic app.get function. I might use it to replace the results:id since it does the same thing
+
+4/6/22
+I also migrated the put and delete api commands to the internal server code. I am very surprised I got it done that fast and am 100% sure I messed something up. I'm going to see if I can 
+get this assignment looked over early since I think I missed something. I especially think that I need to add a parameter thing to the path instead of it calling on /noun/nothing in the server.
+I will also look over a lot of the smaller changes I wanted to make in this changelog so that I can add them for the final since I'm not exactly sure what else we need to do besides everything
+we've been doing for the PAs 
+
+4/8/22
+Ok so apparently I did this right even though I'm sure I did this wrong. I hope I really did this right. I also changed some serverInternal function names and made addNewCard return the 
+insert id of the newly added card so that I can just type getAllCards(add) instead of getAllCards(add.insertId). I want to add this level of functionality to my update statement so that
+it can easily display the new data it just got
+
+4/17/22 
+Holy shit I did forget about this wtf
+Made everything run via a express server instead of CORS stuff. I also made the home page have more options to find specific cards + a limit feature. I made the final project pdf into a 
+checklst so that I can keep track of what else I'm missing and whatnot
+
+4/21/22
+So for the past three days I've just been making sure everything on my website is ready for the final project. The checklist is relatively fine and everything is working now in relation to 
+the checklist, so now I need to add the css stuff and add more data + some other stuff I want to add. I've also added bootstrap for responsiveness just as extra practice to use the language

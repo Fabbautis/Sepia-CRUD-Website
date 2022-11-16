@@ -1,0 +1,9 @@
+body{
+    background-image: url(../Images/viewPage.jpg);
+    background-size:cover;
+    background-blend-mode: lighten;
+}
+
+.container-fluid{
+    margin-top: 5%;
+}

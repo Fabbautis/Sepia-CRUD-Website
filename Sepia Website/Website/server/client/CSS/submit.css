@@ -1,0 +1,8 @@
+body{
+    background-image: url(../Images/submitPage.jpg);
+    background-size:cover;
+    background-blend-mode: lighten;
+}
+#file-display{
+    width: 50%;
+}
